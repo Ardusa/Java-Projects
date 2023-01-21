@@ -82,4 +82,4 @@ def Q2():
         bracketStat(x, inputString, k)
 
 
-Q1()
+Q2()
