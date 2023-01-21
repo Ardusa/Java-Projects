@@ -1,0 +1,12 @@
+###comments
+print(" | |    /\ ")
+print(" | |   /  \ ") 
+print(" | |  /    \ ")
+print(" | | /      \ ")
+print(" |_|/________\ ")
+print("  _____________ ")
+print(" |            | ")
+print(" |            | ")
+print(" |            | ")
+print(" |            | ")
+print(" |____________| ")
