@@ -58,17 +58,17 @@ def Q2():
         return input
 
     def bracketStat(x, val, k):
-        open = '   '
+        open = ' '
 
         if val[k] != val[k+1]:
-            if x == ' ( ':
+            if x == ' ) ':
+                print(val[k], end=open)            
+            elif x == ' ( ':
                 x = ' ) '
                 print(val[k], end=x)
-            if x == ' ) ':
-                print(val[k], end=open)
             if x == ' ) ' and val[k+1] == val[k+2]:
                 x = ' ( '
-                print(x, end='')
+                print(x, end=open)
             else:
                 print(val[k], end=open)
         else:
