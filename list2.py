@@ -48,7 +48,7 @@ def Q1():
     sameElements(getList(1), getList(2))
 
 
-def q2():
+def Q2():
 
     def getInput():
         input = [0] * 20
@@ -82,4 +82,4 @@ def q2():
         bracketStat(x, inputString, k)
 
 
-q2()
+Q1()
