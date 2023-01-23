@@ -1,5 +1,6 @@
 import random
-
+import math
+from random import randint
 
 def Q1():
     def shiftElements(data):
@@ -48,7 +49,7 @@ def Q1():
     sameElements(getList(1), getList(2))
 
 
-def Q2():
+def Q2old():
 
     def getInput():
         input = [0] * 20
@@ -81,6 +82,34 @@ def Q2():
     for k in range(18):
         bracketStat(x, inputString, k)
 
+def Q2():
+    string = [random.randrange(1, 7) for i in range(20)]
+    runVal = []
+    print(string)
+    runStat = False
+    run = ""
+    for i in range(len(string)):
+        if runStat:
+            if string[i] != string[i - 1]:
+                run = ""
+                runVal.append(run)
+                runStat = False
+                continue
+            else:
+                run += str(string[i])
+
+        if not runStat:
+            if i != len(string) - 1:
+                if string[i] == string[i + 1]:
+                    runStat = True
+                    run += str(string[i])
+    runVal = sorted(runVal, key=len)
+    result = ""
+    print("\n")
+    if (len(runVal) > 0):
+        result = result.join(str(x) for x in string)
+        result = result.replace(runVal[-1], "(" + runVal[-1] + ")", 1)
+    print('result: ', result)
 
 Q2()
 
